@@ -438,3 +438,191 @@
     padding-right: 0;
     border-right: none;
 }
+    .slider-wrapper {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      overflow: hidden;
+      height: 380px;
+      padding: 30px 0;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .slider-track {
+      display: flex;
+      transition: transform 0.6s ease;
+      will-change: transform;
+    }
+
+    .slide {
+      flex-shrink: 0;
+      background: #444;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      opacity: 0.7;
+      transition: 0.6s all;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .slide.active {
+      box-shadow: 0 0 20px;
+      opacity: 1;
+    }
+
+    .slide::after {
+      content: attr(data-label);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      font-weight: bold;
+      /* background:  #77d3bd; */
+      color: #fff;
+      text-align: center;
+      font-size: 18px;
+      padding: 10px;
+    }
+
+    .nav-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background:  #00B98E;
+      border: none;
+      padding: 12px 18px;
+      font-size: 18px;
+      cursor: pointer;
+      z-index: 10;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 60px;
+    }
+
+    .prev-button {
+      left: 10px;
+    }
+
+    .next-button {
+      right: 10px;
+    }
+
+    /* Mobile Vertical Mode */
+    @media screen and (max-width: 768px) {
+      .slider-wrapper {
+        flex-direction: column;
+        height: 100vh;
+        padding: 0 50px;
+      }
+
+      .slider-track {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .nav-button {
+        position: absolute;
+        top: auto;
+        left: auto;
+        right: auto;
+        transform: none;
+        margin: 10px auto;
+      }
+
+      .prev-button {
+        order: -1;
+      }
+
+      .next-button {
+        bottom: 0;
+      }
+
+      .slide {
+        width: 100% !important;
+      }
+
+      .slide img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+   
+
+
+
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	background-color: #fafafa;
+}
+
+.containergal {
+	max-width: 100rem;
+	margin: 0 auto;
+	padding: 0 2rem 2rem;
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	/* Compensate for excess margin on outer gallery flex items */
+	margin: -1rem -1rem;
+}
+
+.gallery-item {
+	/* Minimum width of 24rem and grow to fit available space */
+	flex: 1 0 24rem;
+	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+	margin: 1rem;
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+}
+
+.gallery-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+	transform: scale(1.15);
+}
+
+/*
+
+The following rule will only run if your browser supports CSS grid.
+
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
+
+*/
+
+@supports (display: grid) {
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-gap: 2rem;
+	}
+
+	.gallery,
+	.gallery-item {
+		margin: 0;
+	}
+}

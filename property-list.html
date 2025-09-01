@@ -87,6 +87,8 @@
               <a href="index.html" class="nav-item nav-link ">Home</a>
               <a href="about.html" class="nav-item nav-link">About</a>
               <a href="property-agent.html" class="nav-item nav-link ">Agents</a>
+               <a href="gal.html" class="nav-item nav-link"
+                >Gallery</a>
               <a href="property-list.html" class="nav-item nav-link active"
                 >Properties</a
               >
@@ -113,18 +115,7 @@
         <div class="container">
           <div class="row g-0 gx-5 align-items-end">
             <div class="col-lg-6">
-              <div
-                class="text-start mx-auto mb-5 wow slideInLeft"
-                data-wow-delay="0.1s"
-              >
-                <h1 class="mb-3">Property Listing</h1>
-                <p class="mb-3">
-                  Find prime land investments with secure deals and profitable
-                  opportunities. Discover strategically located plots with high
-                  growth potential, trusted by investors for long-term value.
-                  Start building your future with confidence.
-                </p>
-              </div>
+          
             </div>
           </div>
           <div class="tab-content">
@@ -340,31 +331,61 @@
     <script>
       const properties = [
         {
-          img: "img/property-1.jpg",
+          img: "https://dyimg1.realestateindia.com/prop_images/3104986/1189621_3-350x350.jpg",
           price: "$12,345",
-          title: "Golden Urban House For Sell",
-          location: "123 Street, New York, USA",
-          type: "Apartment",
+          title: "Residential Plots",
+          location: "Jehanabad",
+          type: "Plot",
           size: "1000 Sqft",
           bed: "3 Bed",
           bath: "2 Bath",
         },
         {
-          img: "img/property-2.jpg",
+          img: "https://is1-3.housingcdn.com/01c16c28/3820ca0925ad811cece80c12ccac001b/v0/medium/residential_plot-for-sale-rajgir-Nalanda-others.jpg",
           price: "$23,000",
-          title: "Luxury Villa With Pool",
-          location: "456 Avenue, Los Angeles, USA",
-          type: "Villa",
+          title: "Residential Plots",
+          location: "Rajgir",
+          type: "Plot",
           size: "2500 Sqft",
           bed: "4 Bed",
           bath: "3 Bath",
         },
         {
-          img: "img/property-3.jpg",
+          img: "https://housing-images.n7net.in/01c16c28/439c40dddf56949b78a7ac99daf75f72/v0/fs/residential_plot-for-sale-kakrala-Noida-plot_view.jpg",
           price: "$18,900",
-          title: "Modern Family House",
-          location: "789 Boulevard, Chicago, USA",
-          type: "House",
+          title: "Residential Plots",
+          location: "Gaya",
+          type: "Plot",
+          size: "1800 Sqft",
+          bed: "3 Bed",
+          bath: "2 Bath",
+        },
+         {
+          img: "https://housing-images.n7net.in/01c16c28/51326949be3161dfb38aedfd0770c1e9/v0/fs/residential_plot-for-sale-kakrala-Noida-plot_view.jpg",
+          price: "$18,900",
+          title: "Residential Plots",
+          location: "Jharkhand",
+          type: "Plot",
+          size: "1800 Sqft",
+          bed: "3 Bed",
+          bath: "2 Bath",
+        },
+         {
+          img: "https://imagecdn.99acres.com/media1/28821/16/576436273M-1741606818482.webp",
+          price: "$18,900",
+          title: "Residential Plots",
+          location: "Gujrat",
+          type: "Plot",
+          size: "1800 Sqft",
+          bed: "3 Bed",
+          bath: "2 Bath",
+        },
+         {
+          img: "https://images.click.in/classifieds/images/99/18_08_2025_14_38_41_865c6185b45e2822a3ffe398296bef7f_iv7xl4su1p.jpg",
+          price: "$18,900",
+          title: "Residential Plots",
+          location: "Patana",
+          type: "Plot",
           size: "1800 Sqft",
           bed: "3 Bed",
           bath: "2 Bath",
@@ -388,23 +409,13 @@
                     }</div>
                 </div>
                 <div class="p-4 pb-0">
-                    <h5 class="text-primary mb-3">${p.price}</h5>
+                  
                     <a class="d-block h5 mb-2" href="#">${p.title}</a>
                     <p><i class="fa fa-map-marker-alt text-primary me-2"></i>${
                       p.location
                     }</p>
                 </div>
-                <div class="d-flex border-top">
-                    <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>${
-                      p.size
-                    }</small>
-                    <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>${
-                      p.bed
-                    }</small>
-                    <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>${
-                      p.bath
-                    }</small>
-                </div>
+                
             </div>
         </div>`;
       });
